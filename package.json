@@ -1,15 +1,15 @@
 {
-  "name": "@shaharmor/browser-module-boilerplate",
+  "name": "@shaharmor/hidden-iframe",
   "version": "0.0.0",
-  "description": "browser-module-boilerplate",
+  "description": "hidden-iframe",
   "keywords": [],
-  "homepage": "https://github.com/shaharmor/browser-module-boilerplate",
+  "homepage": "https://github.com/shaharmor/hidden-iframe",
   "bugs": {
-    "url": "https://github.com/shaharmor/browser-module-boilerplate/issues"
+    "url": "https://github.com/shaharmor/hidden-iframe/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaharmor/browser-module-boilerplate.git"
+    "url": "git+https://github.com/shaharmor/hidden-iframe.git"
   },
   "license": "MIT",
   "author": {
@@ -24,12 +24,9 @@
     "build": "webpack",
     "clean": "rm -rf ./coverage ./dist",
     "dev": "NODE_ENV=development webpack-dev-server",
-    "lint": "npm run lint:eslint",
-    "lint:eslint": "npm run lint:eslint:glob -- '**/*.ts'",
-    "lint:eslint:glob": "eslint --fix --max-warnings 0",
+    "lint": "eslint . --fix --max-warnings 0 --ext .js,.ts",
     "prepublish": "npm run build",
-    "test": "NODE_ENV=development jest",
-    "test:watch": "npm run test -- '--watch'"
+    "test": "NODE_ENV=development jest"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
